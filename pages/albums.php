@@ -24,16 +24,23 @@
             // Check if there are albums to display
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    // Display album information here
-                    echo "<div>";
-                    echo "Album Name: " . $row['name'] . "<br>";
-                    echo "Artist: " . $row['artist'] . "<br>";
-                    echo "Release Date: " . $row['release_date'] . "<br>";
-                    echo "Album Cover: <img src='" . $row['cover_path'] . "' alt='" . $row['name'] . "'><br>";
-                    echo "</div>";
+                    // Display album information using Bootstrap cards
+                    echo '<div class="col-md-4 mb-4">';
+                    echo '<div class="card">';
+                    echo '<a href="/phpProjekt/pages/review_detail.php?id=' . $row['id'] . '">';
+                    echo '<img src="' . $row['cover_image_url'] . '" class="card-img-top" alt="' . $row['title'] . '">';
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">' . $row['title'] . '</h5>';
+                    echo '<p class="card-text">Artist: ' . $row['artist'] . '</p>';
+                    echo '<p class="card-text">Release Year: ' . $row['release_year'] . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
                 }
             } else {
-                echo "No albums found.";
+                echo '<div class="col-12">';
+                echo '<p>No albums found.</p>';
+                echo '</div>';
             }
 
             // Close the database connection

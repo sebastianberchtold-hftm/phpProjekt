@@ -12,16 +12,16 @@
 
     <nav class="navbar navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="../index.php">Your Logo or Website Title</a>
+            <a class="navbar-brand" href="/phpProjekt/index.php">Your Logo or Website Title</a>
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/insert_albums.php">Add Albums</a>
+                    <a class="nav-link" href="/phpProjekt/pages/insert_albums.php">Add Albums</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
+                    <a class="nav-link" href="/phpProjekt/pages/contact.php">Contact</a>
                 </li>
             </ul>
         </div>

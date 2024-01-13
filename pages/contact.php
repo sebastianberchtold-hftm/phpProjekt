@@ -1,19 +1,17 @@
-<?php include 'header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
+<head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
 <div class="container mt-4">
     <h2>Contact Us</h2>
 
     <?php
-    // Check if the form was submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["name"];
         $email = $_POST["email"];
         $message = $_POST["message"];
-
-        // Perform data validation and processing here
-        // ...
-
-        // For this example, simply display a success message
         echo '<div class="alert alert-success">Thank you for your message, ' . $name . '! We will get back to you soon.</div>';
     }
     ?>
@@ -38,4 +36,4 @@
     </form>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
